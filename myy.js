@@ -112,19 +112,10 @@ st.collection('ods').doc(pk8).set(zsr)
                 allowTaint: true,
                 useCORS: true
             }).then(function (canvas) {
-                var anchorTag = document.createElement("a");
-                document.body.appendChild(anchorTag);
-                //document.getElementById("previewImg").appendChild(canvas);
-            //const d = new Date();
             var ji33=document.getElementById("u13").innerText;
-                
-                //anchorTag.download = d.getFullYear().toString().substr(-2)+(d.getMonth()+1)+'D'+d.getDate()+ji33+".jpg";
-                anchorTag.download = pk8.split('od')[1]+'-'+ji33+po5+".jpg";
-    
-               anchorTag.href = canvas.toDataURL();
-                anchorTag.target = '_blank';
-                anchorTag.click();
-                anchorTag.remove();
+               let po5;
+               if(kli){po5='-GST'}else{po5=''}
+               downl(canvas.toDataURL(),zxc+'-'+ji33+po5+'.jpg');
             });
        document.getElementById("html33").style.width='';
        newc();document.getElementById('gst').checked=0;
