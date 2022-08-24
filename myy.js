@@ -69,7 +69,7 @@ function kjhu(v) {//alert(v.id);document.getElementById('frt').innerText=.innerT
                 var wer6;
                 if(i===0){wer6=jk[i]}else if(jk[i]){
                    // console.log(wer5,wer6,jk[i],i); // t,c,value,index
-                    let ty6=document.querySelector('#'+wer5+' #'+wer6+' td:nth-child('+(i+1)+') input');
+                    let ty6=document.querySelector('#'+wer5+' #'+wer6.replace(/\s+/, "")+' td:nth-child('+(i+1)+') input');
                    ty6.value=jk[i];triggerInput(ty6);
                 }
                 
